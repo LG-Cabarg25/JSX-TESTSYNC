@@ -13,6 +13,7 @@ import AssignmentCard from '../../components/projects/cards/AssigmentsCards';
 import EditProjectModal from '../../components/projects/modals/EditProjectModal';
 import { fetchTaskAssignments, updateTaskAssignment } from '../../services/assignmentsService';
 import { registerProjectAssignmentComment } from '../../services/assignmentsCommentService';
+import { SERVIDOR } from "../../services/Servidor";
 
 const Board = () => {
   const { user, token } = useContext(AuthContext);
@@ -41,7 +42,7 @@ const Board = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/project/user/${user?.user_id}/assigned`, {
+        const response = await fetch(`${SERVIDOR}/${user?.user_id}/assigned`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

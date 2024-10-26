@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter, BrowserRouter as Router } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import AppRoutes from "./routes/AppRoutes";
 import { ToastContainer } from "react-toastify";

@@ -48,7 +48,7 @@ var registerTestPlan = exports.registerTestPlan = /*#__PURE__*/function () {
           }));
         case 10:
           // Crear la URL del documento
-          documentUrl = "http://localhost:8080/uploads/".concat(p_document); // Usa solo el nombre del archivo
+          documentUrl = "https://testsync-backend.online/uploads/".concat(p_document); // Usa solo el nombre del archivo
           // Ejecutar el procedimiento almacenado para registrar un plan de pruebas
           _context.next = 13;
           return _TestPlans["default"].sequelize.query('CALL procedure_to_register_test_plans(:p_project_id, :p_user_id, :p_plan_name, :p_plan_type, :p_description, :p_start_date, :p_end_date, :p_document, :p_status)', {
@@ -123,7 +123,7 @@ var getTestPlansByProject = exports.getTestPlansByProject = /*#__PURE__*/functio
           // Agregar URL del documento a cada plan
           plansWithUrls = testPlans.map(function (plan) {
             return _objectSpread(_objectSpread({}, plan), {}, {
-              document_url: "http://localhost:8080/uploads/".concat(plan.document) // Usa solo el nombre del archivo aquí
+              document_url: "https://testsync-backend.online/uploads/".concat(plan.document) // Usa solo el nombre del archivo aquí
             });
           });
           return _context2.abrupt("return", res.status(200).json(plansWithUrls));
@@ -170,7 +170,7 @@ var updateTestPlan = exports.updateTestPlan = /*#__PURE__*/function () {
               p_test_plan_id: p_test_plan_id,
               p_plan_type: p_plan_type || null,
               p_description: p_description || null,
-              p_document: p_document ? "http://localhost:8080/uploads/".concat(p_document.split('\\').join('/')) : null,
+              p_document: p_document ? "https://testsync-backend.online/uploads/".concat(p_document.split('\\').join('/')) : null,
               p_status: p_status || null // Cambiado para evitar 'undefined'
             }
           });

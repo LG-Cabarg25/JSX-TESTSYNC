@@ -24,7 +24,7 @@ export const registerTestPlan = async (req, res, next) => {
     }
 
     // Crear la URL del documento
-    const documentUrl = `http://localhost:8080/uploads/${p_document}`; // Usa solo el nombre del archivo
+    const documentUrl = `https://testsync-backend.online/uploads/${p_document}`; // Usa solo el nombre del archivo
 
     // Ejecutar el procedimiento almacenado para registrar un plan de pruebas
     await TestPlans.sequelize.query('CALL procedure_to_register_test_plans(:p_project_id, :p_user_id, :p_plan_name, :p_plan_type, :p_description, :p_start_date, :p_end_date, :p_document, :p_status)', {
@@ -58,7 +58,7 @@ export const getTestPlansByProject = async (req, res, next) => {
     // Agregar URL del documento a cada plan
     const plansWithUrls = testPlans.map(plan => ({
       ...plan,
-      document_url: `http://localhost:8080/uploads/${plan.document}` // Usa solo el nombre del archivo aquí
+      document_url: `https://testsync-backend.online/uploads/${plan.document}` // Usa solo el nombre del archivo aquí
     }));
 
     return res.status(200).json(plansWithUrls);
@@ -85,7 +85,7 @@ export const updateTestPlan = async (req, res, next) => {
         p_test_plan_id,
         p_plan_type: p_plan_type || null,
         p_description: p_description || null,
-        p_document: p_document ? `http://localhost:8080/uploads/${p_document.split('\\').join('/')}` : null,
+        p_document: p_document ? `https://testsync-backend.online/uploads/${p_document.split('\\').join('/')}` : null,
         p_status: p_status || null // Cambiado para evitar 'undefined'
       }
     });

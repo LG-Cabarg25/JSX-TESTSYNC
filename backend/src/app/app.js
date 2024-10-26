@@ -22,11 +22,24 @@ const app = express();
 app.use(cors());
 
 const corsOptions = {
-    origin: 'https://testsync.online', // Reemplaza con el dominio permitido
-    methods: 'GET,POST,PUT,DELETE', // Métodos HTTP permitidos
-    allowedHeaders: 'Content-Type,Authorization, x-access-token', // Headers permitidos
+    origin: 'https://testsync.online', 
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: ['Content-Type','Authorization', 'x-access-token'],
   };
 app.use(cors(corsOptions));
+// Maneja la solicitud OPTIONS para CORS preflight
+app.options('*', cors(corsOptions));
+
+// Middleware adicional para asegurarse de que los encabezados de CORS se envían en todas las respuestas
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "https://testsync.online");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization, x-access-token");
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+    next();
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));

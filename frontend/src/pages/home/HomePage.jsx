@@ -27,7 +27,7 @@ function HomePage() {
       {/* Header */}
       <header className="fixed top-0 w-full flex justify-between items-center py-4 px-10 bg-white shadow-sm z-10">
         <div className="flex items-center">
-          <img src="src/assets/icon/color-logo.svg" width="150px" alt="logo" />
+          <img src="icon/color-logo.svg" width="150px" alt="logo" />
         </div>
         <nav className="flex gap-6">
           <a href="#intro" className="hover:text-gray-600 text-[#042354] text-lg">Inicio</a>

@@ -143,14 +143,14 @@ const Planning = () => {
             disabled={selectedProject?.role !== 'QA'}
             className={`rounded-lg p-2 inline-block transition-transform ${selectedProject?.role !== 'QA' ? 'bg-gray-300 cursor-not-allowed' : ''}`}
           >
-            <img src="src/assets/icon/more.svg" height="35" width="35" alt="Agregar Plan" />
+            <img src="icon/more.svg" height="35" width="35" alt="Agregar Plan" />
           </button>
           <button
             onClick={() => handleOpenNewTestCaseModal(plans[0]?.test_plan_id)} // Abre el modal con el primer plan de prueba
             disabled={selectedProject?.role !== 'QA' || plans.length === 0} // Deshabilitar si no hay planes
             className={`rounded-lg p-2 inline-block transition-transform ${selectedProject?.role !== 'QA' || plans.length === 0 ? 'bg-gray-300 cursor-not-allowed' : ''}`}
           >
-            <img src="src/assets/icon/caseTest.svg" height="35" width="35" alt="Generar Caso de Prueba" />
+            <img src="icon/caseTest.svg" height="35" width="35" alt="Generar Caso de Prueba" />
           </button>
         </div>
       </div>

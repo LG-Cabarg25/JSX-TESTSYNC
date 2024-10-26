@@ -86,7 +86,7 @@ const Dashboard = () => {
           onClick={() => setShowModal(true)}
           className="rounded-lg p-2 inline-block hover:scale-110 transition-transform"
         >
-          <img src="src/assets/icon/more.svg" height="35" width="35" alt="Agregar Proyecto" />
+          <img src="icon/more.svg" height="35" width="35" alt="Agregar Proyecto" />
         </button>
       </div>
 

@@ -25,7 +25,7 @@ function RegisterPage() {
         </a>
         <div className="w-full max-w-sm">
           <div className="flex justify-center mb-4">
-            <img src="src/assets/icon/color-logo.svg" width="150px" alt="logo" />
+            <img src="icon/color-logo.svg" width="150px" alt="logo" />
           </div>
           <h1 className="text-3xl font-bold text-[#042354] mb-2 text-center">
             Registro de Usuario

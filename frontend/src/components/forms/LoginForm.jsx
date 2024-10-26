@@ -78,9 +78,9 @@ const FormLogin = () => {
             onClick={togglePasswordVisibility}
           >
             {showPassword ? (
-              <img src="src/assets/icon/visible_ui_icon.svg" width="25px" alt="visible" />
+              <img src="icon/visible_ui_icon.svg" width="25px" alt="visible" />
             ) : (
-              <img src="src/assets/icon/eye_slash_icon.svg" width="25px" alt="hidden" />
+              <img src="icon/eye_slash_icon.svg" width="25px" alt="hidden" />
             )}
           </span>
         </motion.div>

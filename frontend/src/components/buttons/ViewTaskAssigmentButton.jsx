@@ -8,7 +8,7 @@ const ViewTaskAssigmentButton = ({ onClick }) => {
         className="rounded-full p-2 bg-[#e4b4b4] hover:bg-white transition"
       >
         <img 
-          src="src/assets/icon/viewTask.svg" 
+          src="icon/viewTask.svg" 
           height="30" 
           width="30" 
           alt="Ver Tarea" 

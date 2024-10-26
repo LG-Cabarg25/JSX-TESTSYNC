@@ -22,7 +22,7 @@ const app = express();
 app.use(cors());
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // Reemplaza con el dominio permitido
+    origin: 'https://testsync.online', // Reemplaza con el dominio permitido
     methods: 'GET,POST,PUT,DELETE', // Métodos HTTP permitidos
     allowedHeaders: 'Content-Type,Authorization, x-access-token', // Headers permitidos
   };

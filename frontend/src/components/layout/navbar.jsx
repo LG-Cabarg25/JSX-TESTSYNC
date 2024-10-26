@@ -16,7 +16,7 @@ const Navbar = () => {
 
       <div className="flex items-center space-x-4">
         <button onClick={() => navigate('/profile')} className="rounded-lg p-2 inline-block hover:scale-110 transition-transform">
-          <img src="src/assets/icon/profiles.svg" height="40" width="40" alt="Perfil" />
+          <img src="icon/profiles.svg" height="40" width="40" alt="Perfil" />
         </button>
       </div>
     </div>

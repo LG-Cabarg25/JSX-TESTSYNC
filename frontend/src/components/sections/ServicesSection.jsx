@@ -12,7 +12,7 @@ const ServicesSection = () => {
           whileHover={{ scale: 1.05 }}
         >
           <img
-            src="src/assets/img/gestion.jpg"
+            src="img/gestion.jpg"
             alt="Gestión de Proyectos"
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           />
@@ -31,7 +31,7 @@ const ServicesSection = () => {
         >
           <div className="w-full md:w-1/2 h-64">
             <img
-              src="src/assets/img/execute.png"
+              src="img/execute.png"
               alt="Ejecución de Pruebas"
               className="object-cover w-full h-full"
             />
@@ -50,7 +50,7 @@ const ServicesSection = () => {
           whileHover={{ scale: 1.05 }}
         >
           <img
-            src="src/assets/img/results.jpg"
+            src="img/results.jpg"
             alt="Análisis de Resultados"
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           />

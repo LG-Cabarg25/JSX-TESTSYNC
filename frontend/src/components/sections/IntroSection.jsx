@@ -48,7 +48,7 @@ const IntroSection = () => {
 
       <div className="w-full lg:w-1/2 flex justify-center">
         <div className="w-full h-64 lg:h-full bg-white rounded-lg flex justify-center items-center">
-          <img src="src/assets/img/home.png" alt="home" width="600" />
+          <img src="img/home.png" alt="home" width="600" />
         </div>
       </div>
     </div>
